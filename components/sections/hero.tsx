@@ -1,11 +1,12 @@
 'use client'
 
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden py-20 md:py-24 text-white">
-      
+
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -24,7 +25,7 @@ export function Hero() {
 
           {/* Left Content */}
           <div className="space-y-8">
-            
+
             {/* Badge */}
             <span className="inline-block text-white font-semibold text-sm px-6 py-2 bg-white/20 rounded-full backdrop-blur">
               Welcome to Webingic
@@ -46,14 +47,16 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
-              <button className="bg-white text-[#000000] px-8 py-4 rounded-lg font-semibold hover:scale-105 transition flex items-center justify-center gap-2 shadow-xl">
-                Get Started
-                <ArrowRight size={20} />
-              </button>
+              <Link href="/#contact">
+                <button className="bg-white text-[#000000] px-8 py-4 rounded-lg font-semibold hover:scale-105 transition flex items-center justify-center gap-2 shadow-xl">
+                  Get Started
+                  <ArrowRight size={20} />
+                </button>
+              </Link>
 
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition">
+              {/* <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition">
                 Learn More
-              </button>
+              </button> */}
             </div>
 
             {/* Stats */}

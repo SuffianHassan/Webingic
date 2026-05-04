@@ -9,12 +9,12 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const services = [
-    { label: 'Web Development', href: '/services/web-development' },
-    { label: 'Mobile App Development', href: '/services/mobile-app' },
-    { label: 'Web Design', href: '/services/web-design' },
-    { label: 'Digital Marketing', href: '/services/digital-marketing' },
-    { label: 'E-Commerce Development', href: '/services/e-commerce' },
-    { label: 'Logo Design', href: '/services/logo-design' },
+    { label: 'Web Development', href: '' },
+    { label: 'Mobile App Development', href: '' },
+    { label: 'Web Design', href: '' },
+    { label: 'Digital Marketing', href: '' },
+    { label: 'E-Commerce Development', href: '' },
+    { label: 'Logo Design', href: '' },
   ]
 
   return (
@@ -43,7 +43,7 @@ export function Header() {
             <div className="absolute left-0 mt-0 w-48 bg-card rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               {services.map(service => (
                 <Link
-                  key={service.href}
+                  key={service.label}
                   href={service.href}
                   className="block px-4 py-2 text-foreground hover:bg-secondary/10 first:rounded-t-lg last:rounded-b-lg"
                 >
@@ -61,9 +61,11 @@ export function Header() {
         </div>
 
         {/* CTA Button */}
+        <Link href="#contact" >
         <button className="hidden md:block bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-blue-700 transition">
           Get Started
         </button>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button

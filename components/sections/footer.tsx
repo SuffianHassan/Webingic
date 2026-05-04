@@ -6,39 +6,46 @@ import Image from 'next/image'
 
 const footerLinks = {
   Services: [
-    { label: 'Web Development', href: '/services/web-development' },
-    { label: 'Mobile Apps', href: '/services/mobile-app' },
-    { label: 'Web Design', href: '/services/web-design' },
-    { label: 'Digital Marketing', href: '/services/digital-marketing' },
+    { label: 'Web Development', href: '' },
+    { label: 'Mobile Apps', href: '' },
+    { label: 'Web Design', href: '' },
+    { label: 'Digital Marketing', href: '' },
   ],
   Company: [
+    { label: 'Services', href: '#services' },
     { label: 'About Us', href: '#about' },
-    { label: 'Our Team', href: '#team' },
     { label: 'Testimonials', href: '#testimonials' },
     { label: 'Contact', href: '#contact' },
   ],
-  Resources: [
-    { label: 'Blog', href: '#blog' },
-    { label: 'Case Studies', href: '#cases' },
-    { label: 'Documentation', href: '#docs' },
-    { label: 'FAQ', href: '#faq' },
-  ],
+  // Resources: [
+  //   { label: 'Blog', href: '#blog' },
+  //   { label: 'Case Studies', href: '#cases' },
+  //   { label: 'Documentation', href: '#docs' },
+  //   { label: 'FAQ', href: '#faq' },
+  // ],
 }
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-foreground text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="relative bg-foreground text-white overflow-hidden">
+
+      {/* ⭐ Star Pattern Background */}
+      <div className="absolute inset-0 opacity-80">
+        <div className="absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+      </div>
+
+      {/* ✨ Soft gradient fade (adds depth) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
         {/* Top Section */}
         <div className="grid md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+
           {/* Brand */}
           <div className="space-y-4">
-            {/* <h3 className="text-2xl font-bold">Webingic</h3>
-            <p className="text-gray-300 text-sm">
-              Building web apps. Empowering businesses.
-            </p> */}
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/logo-white.png"
@@ -47,8 +54,8 @@ export function Footer() {
                 height={40}
                 className="h-16 w-25"
               />
-              {/* <span className="font-bold text-xl text-foreground hidden sm:inline">Webingic</span> */}
             </Link>
+
             <div className="flex gap-4">
               <a href="#" className="hover:text-primary transition">
                 <Linkedin size={20} />
@@ -70,8 +77,8 @@ export function Footer() {
             <div key={category}>
               <h4 className="font-semibold mb-4">{category}</h4>
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.href}>
+                {links.map((link, index) => (
+                  <li key={`${link.label}-${index}`}>
                     <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white transition text-sm"
@@ -85,11 +92,12 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
             © {currentYear} Webingic. All rights reserved.
           </p>
+
           <div className="flex gap-6">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition">
               Privacy Policy
@@ -97,11 +105,12 @@ export function Footer() {
             <a href="#" className="text-gray-400 hover:text-white text-sm transition">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition">
+            {/* <a href="#" className="text-gray-400 hover:text-white text-sm transition">
               Cookie Policy
-            </a>
+            </a> */}
           </div>
         </div>
+
       </div>
     </footer>
   )

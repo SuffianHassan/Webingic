@@ -31,7 +31,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-[#0360df]/70 via-white to-[#5435f6]/50">
+    <section id="testimonials" className="py-20 md:py-32 bg-gradient-to-b from-[#0360df]/70 via-white to-[#5435f6]/50">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
