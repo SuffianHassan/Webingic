@@ -57,7 +57,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative py-16 md:py-24 overflow-hidden">
+    <section id="services" className="relative py-16 md:py-32 overflow-hidden">
 
       {/* 🔥 Your Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#2B37F9]/100 via-[#4D30F9]/80 to-[#4847E8]/90" />

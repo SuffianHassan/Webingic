@@ -46,7 +46,7 @@ function CountUp({ target, duration = 2000 }: { target: number; duration?: numbe
 
 export function Stats() {
   return (
-    <section className="py-14 md:py-20 relative">
+    <section className="py-14 md:py-32 relative">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Heading */}

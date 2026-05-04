@@ -41,7 +41,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section className="relative py-16 md:py-20 bg-[#EDF0FB] overflow-hidden">
+    <section className="relative py-16 md:py-30 bg-[#EDF0FB] overflow-hidden">
 
       {/* subtle background glow */}
       <div className="absolute inset-0">
