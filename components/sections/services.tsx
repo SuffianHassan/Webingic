@@ -60,7 +60,7 @@ export function Services() {
     <section id="services" className="relative py-16 md:py-32 overflow-hidden">
 
       {/* 🔥 Your Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#2B37F9]/100 via-[#4D30F9]/80 to-[#4847E8]/90" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#6e9eed]/70 via-[#4847E8]/80 to-[#4847E8]/70" />
 
       {/* Optional glow blobs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full" />

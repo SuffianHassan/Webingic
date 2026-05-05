@@ -1,5 +1,6 @@
 import { ServiceLayout } from '@/components/service-pages/service-layout'
 import { Eye, Palette, Zap, Users, BarChart3, Shield } from 'lucide-react'
+import Link from 'next/link'
 
 const design_services = [
   { icon: Eye, title: 'UI/UX Design', description: 'Beautiful and intuitive interfaces that users love' },
@@ -23,36 +24,94 @@ export default function WebDesign() {
   return (
     <ServiceLayout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-100/50 via-background to-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <span className="text-indigo-600 font-semibold text-sm px-4 py-2 bg-indigo-100/50 rounded-full inline-block">
+      <section className="relative pt-32 pb-24 overflow-hidden">
+
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/web-design.png"
+            alt="Web Design"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Gradient Overlay (orange + purple theme) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600/100 via-[#998af4]/80 to-white/70"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+            {/* LEFT CONTENT */}
+            <div className="space-y-6">
+
+              <span className="text-indigo-600 font-semibold text-sm px-4 py-2 bg-white/60 backdrop-blur rounded-full inline-block border">
                 Web Design
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
                 Stunning Designs That Convert
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl">
-                Beautiful, user-centered web designs that not only look amazing but also drive business results and user engagement.
+
+              <p className="text-xl text-gray-100 max-w-xl">
+                Beautiful, user-centered web designs that not only look amazing but also drive real business results and meaningful user engagement.
               </p>
+
+              <div className="pt-4">
+                <Link href="#contact">
+                  <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">
+                    Start Your Design
+                  </button>
+                </Link>
+              </div>
+
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 pt-8">
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-indigo-600">200+</p>
-                <p className="text-muted-foreground mt-2">Design Projects</p>
+            {/* RIGHT - DESIGN LAYERS ANIMATION */}
+            <div className="relative h-[420px] hidden md:block">
+
+              {/* Layer 1 */}
+              <div className="absolute top-0 left-10 w-72 h-40 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden animate-float1">
+                <img src="/web-design.avif" className="w-full h-full object-cover" />
               </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-indigo-600">35+</p>
-                <p className="text-muted-foreground mt-2">Award Nominations</p>
+
+              {/* Layer 2 */}
+              <div className="absolute top-24 right-10 w-64 h-40 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden animate-float2">
+                <img src="/web-design1.webp" className="w-full h-full object-cover" />
               </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-indigo-600">95%</p>
-                <p className="text-muted-foreground mt-2">Client Retention</p>
+
+              {/* Layer 3 */}
+              <div className="absolute bottom-0 left-20 w-56 h-36 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden animate-float1">
+                <img src="/web-design2.jpeg" className="w-full h-full object-cover" />
               </div>
+
+              {/* Soft Glow Accent */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-60 h-60 bg-[#998af4]/30 rounded-full blur-3xl"></div>
+              </div>
+
+              {/* Animations */}
+              <style>{`
+        @keyframes float1 {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(-12px); }
+          100% { transform: translateY(0); }
+        }
+
+        @keyframes float2 {
+          0% { transform: translateY(0); }
+          50% { transform: translateY(12px); }
+          100% { transform: translateY(0); }
+        }
+
+        .animate-float1 { animation: float1 6s ease-in-out infinite; }
+        .animate-float2 { animation: float2 7s ease-in-out infinite; }
+      `}</style>
+
             </div>
+
           </div>
+
         </div>
       </section>
 

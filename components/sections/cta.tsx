@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export function CTA() {
   return (
-    <section className="py-20 md:py-16 bg-gradient-to-r from-primary via-primary/90 to-secondary">
+    <section className="py-20 md:py-16 bg-gradient-to-r from-primary via-primary to-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Decorative Elements */}
         <div className="absolute top-10 right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>

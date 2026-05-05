@@ -16,7 +16,7 @@ export function ServiceLayout({ children }: ServiceLayoutProps) {
       <Header />
       {children}
       <CTA />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   )

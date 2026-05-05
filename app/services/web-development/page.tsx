@@ -23,118 +23,244 @@ export default function WebDevelopment() {
   return (
     <ServiceLayout>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-20 pb-20 overflow-hidden">
+
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/web.png" // 👉 add your image in /public
+            alt="Web Development"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#045de3]/90 via-[#6f59f7]/80 to-black/50"></div>
+
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+
           <div className="space-y-8">
-            <div className="space-y-4">
-              <span className="text-primary font-semibold text-sm px-4 py-2 bg-primary/20 rounded-full inline-block">
+
+            {/* Text */}
+            <div className="space-y-4 max-w-3xl">
+              <span className="font-semibold text-sm px-4 py-2 bg-white/10 backdrop-blur rounded-full inline-block border border-white/20">
                 Web Development
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Custom Web Applications Built for Success
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl">
+
+              <p className="text-xl text-white/80">
                 Transform your ideas into powerful, scalable web applications that drive business growth and user engagement.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 pt-8">
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-primary">250+</p>
-                <p className="text-muted-foreground mt-2">Web Apps Delivered</p>
+            {/* Animated Feature Pills */}
+            <div className="relative pt-12 h-[220px]">
+
+              {/* Glow Center */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-40 h-40 bg-white/100 rounded-full blur-3xl"></div>
               </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-primary">45+</p>
-                <p className="text-muted-foreground mt-2">Expert Developers</p>
-              </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-primary">99.9%</p>
-                <p className="text-muted-foreground mt-2">Uptime Guarantee</p>
-              </div>
+
+              {[
+                "Custom Dashboards",
+                "Scalable APIs",
+                "React Apps",
+                "E-commerce Solutions",
+                "Admin Panels",
+                "High Performance"
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className={`absolute px-4 py-2 bg-[#045de3]/30 text-white backdrop-blur border rounded-full text-sm shadow-md animate-float-${i}`}
+                >
+                  {item}
+                </div>
+              ))}
+
+              {/* Animations */}
+              <style>{`
+        @keyframes float1 {
+          0% { transform: translate(0,0); }
+          50% { transform: translate(20px,-20px); }
+          100% { transform: translate(0,0); }
+        }
+        @keyframes float2 {
+          0% { transform: translate(0,0); }
+          50% { transform: translate(-25px,15px); }
+          100% { transform: translate(0,0); }
+        }
+        @keyframes float3 {
+          0% { transform: translate(0,0); }
+          50% { transform: translate(15px,25px); }
+          100% { transform: translate(0,0); }
+        }
+
+        .animate-float-0 { animation: float1 6s ease-in-out infinite; top: 0; left: 20%; }
+        .animate-float-1 { animation: float2 7s ease-in-out infinite; top: 30%; left: 65%; }
+        .animate-float-2 { animation: float3 5s ease-in-out infinite; top: 65%; left: 25%; }
+        .animate-float-3 { animation: float1 8s ease-in-out infinite; top: 10%; left: 75%; }
+        .animate-float-4 { animation: float2 6s ease-in-out infinite; top: 70%; left: 55%; }
+        .animate-float-5 { animation: float3 7s ease-in-out infinite; top: 40%; left: 5%; }
+      `}</style>
+
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 md:py-32 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-16 text-center">
-            Why Choose Our Web Development Services
-          </h2>
 
+      <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#f8f9fd]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-3xl font-bold text-gray-900 mb-4">
+              Why Choose Our Web Development Services
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              We combine cutting-edge technology with proven strategies to deliver scalable, high-performance solutions.
+            </p>
+          </div>
+
+          {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {features.map((feature, index) => {
               const Icon = feature.icon
+
               return (
                 <div
                   key={index}
-                  className="bg-card rounded-xl p-8 border border-border hover:border-primary/30 hover:shadow-lg transition-all"
+                  className="group relative bg-white/70 backdrop-blur rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="text-primary" size={24} />
+
+                  {/* Top gradient line */}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#045de3] to-[#6f59f7] opacity-0 group-hover:opacity-100 transition"></div>
+
+                  {/* Icon */}
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#045de3]/10 to-[#6f59f7]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                    <Icon className="text-primary" size={26} />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
+
+                  {/* Description */}
+                  <p className="text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
+
                 </div>
               )
             })}
+
           </div>
+
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/5">
+      <section className="py-20 md:py-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-16 text-center">
+
+          {/* Heading */}
+          <h2 className="text-4xl font-bold text-foreground mb-20 text-center">
             Our Development Process
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {process.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="bg-card rounded-xl p-8 border border-border h-full">
-                  <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-lg mb-4">
+          {/* Timeline Wrapper */}
+          <div className="relative">
+
+            {/* Horizontal Line */}
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
+
+            <div className="grid lg:grid-cols-6 gap-10">
+
+              {process.map((item, index) => (
+                <div key={index} className="relative text-center group">
+
+                  {/* Step Circle */}
+                  <div className="mx-auto mb-6 w-16 h-16 rounded-full bg-white border-4 border-primary flex items-center justify-center text-primary font-bold text-lg shadow-md group-hover:scale-110 transition">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
 
-                {/* Connection Line */}
-                {index < process.length - 1 && (
-                  <div className="absolute -right-4 top-1/2 hidden lg:block">
-                    <div className="w-8 h-1 bg-primary/20"></div>
+                  {/* Content */}
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
-                )}
-              </div>
-            ))}
+
+                  {/* Vertical connector for mobile */}
+                  {index < process.length - 1 && (
+                    <div className="lg:hidden absolute left-1/2 -bottom-10 w-[2px] h-10 bg-primary/20 -translate-x-1/2"></div>
+                  )}
+
+                </div>
+              ))}
+
+            </div>
           </div>
+
         </div>
       </section>
 
-      {/* Tech Stack Section */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-20 md:py-32 bg-gradient-to-b from-[#f8f9fd] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-16 text-center">
-            Technologies We Use
-          </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {['React', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'MongoDB', 'AWS', 'Docker'].map((tech, index) => (
-              <div key={index} className="bg-card rounded-lg p-6 border border-border text-center hover:border-primary transition">
-                <p className="font-semibold text-foreground">{tech}</p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+            {/* LEFT - IMAGE */}
+            <div className="relative">
+              <div className="rounded-3xl overflow-hidden shadow-xl">
+                <img
+                  src="/web-dev.png" // 👉 add in public folder
+                  alt="Web Development"
+                  className="w-full h-[420px] object-cover"
+                />
               </div>
-            ))}
+
+              {/* subtle overlay card */}
+              <div className="absolute -bottom-6 left-6 bg-white p-4 rounded-xl shadow-md">
+                <p className="text-sm text-gray-600">
+                  🚀 High-performance applications
+                </p>
+              </div>
+            </div>
+
+            {/* RIGHT - CONTENT */}
+            <div className="space-y-6">
+
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Built for Performance & Scalability
+              </h2>
+
+              <p className="text-gray-600 text-lg">
+                We don’t just build websites—we engineer high-performing digital products designed to scale with your business. From architecture to deployment, every decision is made with performance, security, and growth in mind.
+              </p>
+
+              <div className="space-y-3">
+                <p className="text-gray-700">✔ Optimized for speed and performance</p>
+                <p className="text-gray-700">✔ Scalable architecture for future growth</p>
+                <p className="text-gray-700">✔ Secure and reliable systems</p>
+                <p className="text-gray-700">✔ Modern technologies & best practices</p>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
       </section>
     </ServiceLayout>

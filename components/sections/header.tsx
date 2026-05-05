@@ -9,12 +9,12 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const services = [
-    { label: 'Web Development', href: '' },
-    { label: 'Mobile App Development', href: '' },
-    { label: 'Web Design', href: '' },
-    { label: 'Digital Marketing', href: '' },
-    { label: 'E-Commerce Development', href: '' },
-    { label: 'Logo Design', href: '' },
+    { label: 'Web Development', href: '/services/web-development' },
+    { label: 'Mobile App Development', href: '/services/mobile-app' },
+    { label: 'Web Design', href: '/services/web-design' },
+    { label: 'Digital Marketing', href: '/services/digital-marketing' },
+    { label: 'E-Commerce Development', href: '/services/e-commerce' },
+    { label: 'Logo Design', href: '/services/logo-design' },
   ]
 
   return (
@@ -62,9 +62,9 @@ export function Header() {
 
         {/* CTA Button */}
         <Link href="#contact" >
-        <button className="hidden md:block bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-          Get Started
-        </button>
+          <button className="hidden md:block bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+            Get Started
+          </button>
         </Link>
 
         {/* Mobile Menu Button */}
