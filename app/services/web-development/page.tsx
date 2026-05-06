@@ -115,15 +115,23 @@ export default function WebDevelopment() {
       </section>
 
 
-      <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#f8f9fd]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 md:py-32 overflow-hidden">
+
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#6F6AF3]/10 via-white to-[#3D62E9]/10"></div>
+
+        {/* Soft Glow Blobs */}
+        <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#6F6AF3]/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-[#3D62E9]/20 rounded-full blur-3xl"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Why Choose Our Web Development Services
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               We combine cutting-edge technology with proven strategies to deliver scalable, high-performance solutions.
             </p>
           </div>
@@ -137,26 +145,28 @@ export default function WebDevelopment() {
               return (
                 <div
                   key={index}
-                  className="group relative bg-white/70 backdrop-blur rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                  className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-[#6F6AF3]/40 to-[#3D62E9]/40 hover:from-[#6F6AF3] hover:to-[#3D62E9] transition-all duration-300"
                 >
 
-                  {/* Top gradient line */}
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#045de3] to-[#6f59f7] opacity-0 group-hover:opacity-100 transition"></div>
+                  {/* Inner Card */}
+                  <div className="h-full bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-white/40 shadow-sm group-hover:shadow-xl transition-all duration-300">
 
-                  {/* Icon */}
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#045de3]/10 to-[#6f59f7]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
-                    <Icon className="text-primary" size={26} />
+                    {/* Icon */}
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#6F6AF3]/10 to-[#3D62E9]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                      <Icon className="text-[#3D62E9]" size={26} />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {feature.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {feature.description}
+                    </p>
+
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
 
                 </div>
               )

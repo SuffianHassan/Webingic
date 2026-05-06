@@ -33,7 +33,7 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-18">
-          <Link href="#services" className="text-foreground font-semibold hover:text-primary transition">
+          <Link href="/#services" className="text-foreground font-semibold hover:text-primary transition">
             Services
           </Link>
           <div className="group relative">
@@ -57,13 +57,13 @@ export function Header() {
           <Link href="/about" className="text-foreground font-semibold hover:text-primary transition">
             About
           </Link>
-          <Link href="#contact" className="text-foreground font-semibold hover:text-primary transition">
+          <Link href="/#contact" className="text-foreground font-semibold hover:text-primary transition">
             Contact
           </Link>
         </div>
 
         {/* CTA Button */}
-        <Link href="#contact" >
+        <Link href="/#contact" >
           <button className="hidden md:block bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-blue-700 transition">
             Get Started
           </button>
