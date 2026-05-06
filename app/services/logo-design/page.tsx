@@ -20,40 +20,107 @@ const design_process_steps = [
 export default function LogoDesign() {
   return (
     <ServiceLayout>
+
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-rose-100/50 via-background to-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <span className="text-rose-600 font-semibold text-sm px-4 py-2 bg-rose-100/50 rounded-full inline-block">
+      <section className="relative pt-32 pb-24 overflow-hidden">
+
+        {/* Background Image (optional subtle texture) */}
+        <div className="absolute inset-0">
+          <img
+            src="/logo-design.jpg"
+            alt="Logo Design Background"
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+
+        {/* Pale Blue Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#ebf951]/100 via-[#ebf951]/30 to-[#3088fc]/80"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+
+            {/* LEFT CONTENT */}
+            <div className="space-y-6">
+
+              <span className="text-blue-600 font-semibold text-sm px-4 py-2 bg-blue-100/70 rounded-full inline-block border">
                 Logo Design
               </span>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                Memorable Logos That Stand Out
+
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                Crafting Visual Identities That Speak
               </h1>
-              <p className="text-xl text-muted-foreground max-w-2xl">
-                Create a powerful brand identity with professional logo design that captures your company&apos;s essence and resonates with your audience.
+
+              <p className="text-lg text-gray-600 max-w-xl">
+                We design timeless brand identities that capture emotion, build recognition,
+                and make your business unforgettable across every platform.
               </p>
+
+              {/* CTA */}
+              <div className="pt-4">
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                  Start Your Brand Identity
+                </button>
+              </div>
+
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 pt-8">
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-rose-600">500+</p>
-                <p className="text-muted-foreground mt-2">Logos Designed</p>
+            {/* RIGHT - CREATIVE LOGO ANIMATION */}
+            <div className="relative h-[420px] hidden md:block">
+
+              {/* Glow */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-72 h-72 bg-blue-300/30 rounded-full blur-3xl"></div>
               </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-rose-600">98%</p>
-                <p className="text-muted-foreground mt-2">Client Satisfaction</p>
+
+              {/* Floating Logo Cards */}
+              <div className="absolute top-10 left-10 animate-float1">
+                <div className="w-40 h-40 bg-white rounded-2xl shadow-xl border flex items-center justify-center">
+                  <span className="text-2xl font-bold text-blue-600">A</span>
+                </div>
               </div>
-              <div className="bg-card rounded-lg p-6 border border-border">
-                <p className="text-3xl font-bold text-rose-600">25+</p>
-                <p className="text-muted-foreground mt-2">Design Awards</p>
+
+              <div className="absolute top-32 right-10 animate-float2">
+                <div className="w-44 h-44 bg-white rounded-2xl shadow-xl border flex items-center justify-center">
+                  <span className="text-2xl font-bold text-pink-500">B</span>
+                </div>
               </div>
+
+              <div className="absolute bottom-0 left-24 animate-float1">
+                <div className="w-36 h-36 bg-white rounded-2xl shadow-xl border flex items-center justify-center">
+                  <span className="text-2xl font-bold text-indigo-500">C</span>
+                </div>
+              </div>
+
+              {/* Soft sketch lines */}
+              <div className="absolute inset-0 opacity-20">
+                <div className="w-full h-full bg-[radial-gradient(circle,#00000010_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+              </div>
+
+              {/* Animations */}
+              <style>{`
+          @keyframes float1 {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+            100% { transform: translateY(0); }
+          }
+
+          @keyframes float2 {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(14px); }
+            100% { transform: translateY(0); }
+          }
+
+          .animate-float1 { animation: float1 6s ease-in-out infinite; }
+          .animate-float2 { animation: float2 7s ease-in-out infinite; }
+        `}</style>
+
             </div>
+
           </div>
+
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 md:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

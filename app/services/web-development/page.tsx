@@ -35,7 +35,7 @@ export default function WebDevelopment() {
         </div>
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#045de3]/90 via-[#6f59f7]/80 to-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#045de3]/100 via-[#6f59f7]/90 to-black/50"></div>
 
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -75,7 +75,7 @@ export default function WebDevelopment() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`absolute px-4 py-2 bg-[#045de3]/30 text-white backdrop-blur border rounded-full text-sm shadow-md animate-float-${i}`}
+                  className={`absolute px-4 py-2 bg-[#ffffff]/70 text-blue-600 backdrop-blur border rounded-full text-sm shadow-md animate-float-${i}`}
                 >
                   {item}
                 </div>

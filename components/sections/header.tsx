@@ -37,9 +37,11 @@ export function Header() {
             Services
           </Link>
           <div className="group relative">
+
             <button className="text-foreground font-semibold hover:text-primary transition">
               Solutions
             </button>
+
             <div className="absolute left-0 mt-0 w-48 bg-card rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               {services.map(service => (
                 <Link
@@ -52,7 +54,7 @@ export function Header() {
               ))}
             </div>
           </div>
-          <Link href="#about" className="text-foreground font-semibold hover:text-primary transition">
+          <Link href="/about" className="text-foreground font-semibold hover:text-primary transition">
             About
           </Link>
           <Link href="#contact" className="text-foreground font-semibold hover:text-primary transition">
