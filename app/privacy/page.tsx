@@ -8,13 +8,13 @@ export default function PrivacyPolicy() {
             <section className="relative pt-32 pb-24 overflow-hidden">
 
                 {/* Background */}
-                <div className="absolute inset-0">
+                {/* <div className="absolute inset-0">
                     <img
                         src="/privacy-banner.jpg"
                         alt="Privacy Policy"
                         className="w-full h-full object-cover"
                     />
-                </div>
+                </div> */}
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-[#4148e6]/70 to-[#00ffff]/80"></div>
@@ -40,16 +40,6 @@ export default function PrivacyPolicy() {
                             website and services.
                         </p>
 
-                        <div className="flex flex-wrap gap-4 text-sm text-white">
-                            <div className="bg-white/10 backdrop-blur border border-white/20 px-4 py-2 rounded-full">
-                                Effective Date: 01 January 2022
-                            </div>
-
-                            <div className="bg-white/10 backdrop-blur border border-white/20 px-4 py-2 rounded-full">
-                                International Clients Only
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
@@ -63,9 +53,6 @@ export default function PrivacyPolicy() {
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] bg-[size:50px_50px]"></div>
                 </div>
 
-                {/* Glow */}
-                <div className="absolute top-10 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-
                 <div className="relative max-w-5xl mx-auto px-4">
 
                     {/* Main Card */}
@@ -77,17 +64,14 @@ export default function PrivacyPolicy() {
                         shadow-2xl
                     ">
 
-                        {/* Decorative Glow */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-cyan-500/5"></div>
-
                         <div className="relative p-8 md:p-14">
 
                             {/* Header */}
                             <div className="mb-14 pb-10 border-b border-gray-200">
 
-                                <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                                <h3 className="text-4xl font-bold text-gray-900 mb-6">
                                     Privacy Policy
-                                </h2>
+                                </h3>
 
                                 <div className="grid md:grid-cols-2 gap-6 text-gray-600">
 
@@ -142,24 +126,17 @@ export default function PrivacyPolicy() {
                             </div>
 
                             {/* POLICY CONTENT */}
-                            <div className="
-                                prose prose-lg max-w-none
-                                prose-headings:text-gray-900
-                                prose-headings:font-bold
-                                prose-p:text-gray-600
-                                prose-p:leading-8
-                                prose-li:text-gray-600
-                                prose-strong:text-gray-900
-                                prose-ol:text-gray-600
-                            ">
+                            <div className="max-w-none text-gray-600 leading-8">
 
-                                <h2>1. Introduction</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-2">
+                                    1. Introduction
+                                </h3>
 
-                                <p>
+                                <p className="mb-2">
                                     Welcome to Webingic.
                                 </p>
 
-                                <p>
+                                <p className="mb-2">
                                     This Privacy Policy explains how Webingic collects,
                                     uses, stores, protects, discloses, and manages
                                     information when you visit our website, contact us,
@@ -167,7 +144,7 @@ export default function PrivacyPolicy() {
                                     or otherwise interact with us.
                                 </p>
 
-                                <p>
+                                <p className="mb-2">
                                     Webingic provides professional digital services,
                                     including website development, mobile application
                                     development, e-commerce development, user interface and
@@ -176,26 +153,27 @@ export default function PrivacyPolicy() {
                                     technology services.
                                 </p>
 
-                                <p>
+                                <p className="mb-2">
                                     Our services are intended for international business
                                     clients, founders, companies, startups, agencies, and
                                     professional clients located outside Pakistan.
-                                </p>
+                                
 
-                                <p>
+                                
                                     By using our website or communicating with us, you
                                     acknowledge that you have read and understood this
                                     Privacy Policy.
                                 </p>
 
-                                <h2>2. Scope of This Privacy Policy</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">
+                                    2. Scope of This Privacy Policy
+                                </h3>
 
-                                <p>
-                                    This Privacy Policy applies to information collected
-                                    through:
+                                <p className="mb-2">
+                                    This Privacy Policy applies to information collected through:
                                 </p>
 
-                                <ol>
+                                <ol className="list-decimal pl-6 space-y-3 mb-2">
                                     <li>Our website, webingic.com.</li>
                                     <li>Contact forms on our website.</li>
                                     <li>Email communications with Webingic.</li>
@@ -205,30 +183,34 @@ export default function PrivacyPolicy() {
                                     <li>Analytics, cookies, server logs, and tracking technologies.</li>
                                 </ol>
 
-                                <p>
+                                <p className="mb-2">
                                     This Privacy Policy does not apply to third-party
                                     platforms, payment processors, hosting providers,
                                     analytics providers, or external tools that we do not
                                     own or control.
                                 </p>
 
-                                <h2>3. International Service Notice</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">
+                                    3. International Service Notice
+                                </h3>
 
-                                <p>
+                                <p className="mb-2">
                                     Webingic is based in Pakistan but provides digital
                                     services to international clients only.
                                 </p>
 
-                                <p>
+                                <p className="mb-2">
                                     Because our clients may be located in different
                                     countries, your information may be processed, stored, or
                                     accessed in countries different from your country of
                                     residence.
                                 </p>
 
-                                <h2>4. Information We Collect</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">
+                                    4. Information We Collect
+                                </h3>
 
-                                <p>
+                                <p className="mb-2">
                                     We collect only the information reasonably necessary to
                                     operate our website, respond to inquiries, provide
                                     services, manage projects, process payments, protect our
@@ -236,9 +218,11 @@ export default function PrivacyPolicy() {
                                     operations.
                                 </p>
 
-                                <h3>4.1 Information You Provide Directly</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
+                                    4.1 Information You Provide Directly
+                                </h3>
 
-                                <ol>
+                                <ol className="list-decimal pl-6 space-y-3 mb-2">
                                     <li>Your name</li>
                                     <li>Business name</li>
                                     <li>Email address</li>
@@ -253,9 +237,11 @@ export default function PrivacyPolicy() {
                                     <li>Communications and attachments</li>
                                 </ol>
 
-                                <h3>4.2 Technical Information</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
+                                    4.2 Technical Information
+                                </h3>
 
-                                <ol>
+                                <ol className="list-decimal pl-6 space-y-3 mb-2">
                                     <li>IP address</li>
                                     <li>Browser type</li>
                                     <li>Device type</li>
@@ -266,24 +252,28 @@ export default function PrivacyPolicy() {
                                     <li>Server logs</li>
                                 </ol>
 
-                                <h3>4.3 Cookies and Tracking Technologies</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
+                                    4.3 Cookies and Tracking Technologies
+                                </h3>
 
-                                <p>
+                                <p className="mb-2">
                                     Our website may use cookies, pixels, scripts, and
                                     similar technologies to improve functionality, analyze
                                     traffic, measure performance, support security, and
                                     prevent abuse.
                                 </p>
 
-                                <h2>5. Information We Do Not Intentionally Collect</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">
+                                    5. Information We Do Not Intentionally Collect
+                                </h3>
 
-                                <p>
+                                <p className="mb-2">
                                     We do not intentionally request or collect highly
                                     sensitive information unless strictly necessary and
                                     agreed in writing.
                                 </p>
 
-                                <ol>
+                                <ol className="list-decimal pl-6 space-y-3 mb-2">
                                     <li>Government identification documents</li>
                                     <li>Full credit card numbers</li>
                                     <li>Health information</li>
@@ -294,24 +284,7 @@ export default function PrivacyPolicy() {
                                     <li>Religious beliefs</li>
                                 </ol>
 
-                                <h2>6. How We Use Information</h2>
-
-                                <p>
-                                    We may use information to:
-                                </p>
-
-                                <ol>
-                                    <li>Respond to inquiries</li>
-                                    <li>Provide services</li>
-                                    <li>Manage projects</li>
-                                    <li>Process invoices and payments</li>
-                                    <li>Improve our website and services</li>
-                                    <li>Prevent fraud and abuse</li>
-                                    <li>Comply with legal obligations</li>
-                                    <li>Protect our intellectual property and rights</li>
-                                </ol>
-
-                                <h2>7. Legal Bases for Processing</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">7. Legal Bases for Processing</h3>
 
                                 <ol>
                                     <li>
@@ -335,7 +308,7 @@ export default function PrivacyPolicy() {
                                     </li>
                                 </ol>
 
-                                <h2>8. Client Responsibility</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">8. Client Responsibility</h3>
 
                                 <p>
                                     Clients are responsible for ensuring they have the legal
@@ -343,7 +316,7 @@ export default function PrivacyPolicy() {
                                     data, or materials with Webingic.
                                 </p>
 
-                                <h2>9. Contractors and Service Providers</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">9. Contractors and Service Providers</h3>
 
                                 <p>
                                     We may work with developers, designers, hosting
@@ -353,7 +326,7 @@ export default function PrivacyPolicy() {
                                     services.
                                 </p>
 
-                                <h2>10. Artificial Intelligence and Automation Tools</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">10. Artificial Intelligence and Automation Tools</h3>
 
                                 <p>
                                     Webingic may use AI assisted tools, development tools,
@@ -362,7 +335,7 @@ export default function PrivacyPolicy() {
                                     delivery.
                                 </p>
 
-                                <h2>11. How We Share Information</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">11. How We Share Information</h3>
 
                                 <p>
                                     We do not sell personal information in the ordinary
@@ -375,7 +348,7 @@ export default function PrivacyPolicy() {
                                     legally required.
                                 </p>
 
-                                <h2>12. International Transfers</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">12. International Transfers</h3>
 
                                 <p>
                                     Because Webingic serves international clients, your
@@ -383,7 +356,7 @@ export default function PrivacyPolicy() {
                                     countries outside your jurisdiction.
                                 </p>
 
-                                <h2>13. Data Retention</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">13. Data Retention</h3>
 
                                 <p>
                                     We retain information only as long as reasonably
@@ -391,7 +364,7 @@ export default function PrivacyPolicy() {
                                     dispute resolution purposes.
                                 </p>
 
-                                <h2>14. Security</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">14. Security</h3>
 
                                 <p>
                                     We use reasonable technical and organizational safeguards
@@ -404,14 +377,14 @@ export default function PrivacyPolicy() {
                                     secure, and we cannot guarantee absolute security.
                                 </p>
 
-                                <h2>15. Website Credentials and Client Access</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">15. Website Credentials and Client Access</h3>
 
                                 <p>
                                     Clients remain responsible for their own accounts,
                                     passwords, permissions, and systems.
                                 </p>
 
-                                <h2>16. Client Content and Third-Party Rights</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">16. Client Content and Third-Party Rights</h3>
 
                                 <p>
                                     Clients are responsible for all content, files,
@@ -419,7 +392,7 @@ export default function PrivacyPolicy() {
                                     provide to Webingic.
                                 </p>
 
-                                <h2>17. Children’s Privacy</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">17. Children’s Privacy</h3>
 
                                 <p>
                                     Our website and services are intended for business and
@@ -427,7 +400,7 @@ export default function PrivacyPolicy() {
                                     children.
                                 </p>
 
-                                <h2>18. Marketing Communications</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">18. Marketing Communications</h3>
 
                                 <p>
                                     We may send service-related communications, invoices,
@@ -435,7 +408,7 @@ export default function PrivacyPolicy() {
                                     notices.
                                 </p>
 
-                                <h2>19. Analytics and Tracking</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">19. Analytics and Tracking</h3>
 
                                 <p>
                                     We may use analytics tools to understand how visitors
@@ -443,7 +416,7 @@ export default function PrivacyPolicy() {
                                     performance.
                                 </p>
 
-                                <h2>20. Do Not Track Signals</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5" >20. Do Not Track Signals</h3>
 
                                 <p>
                                     Some browsers may send Do Not Track or privacy signals.
@@ -451,7 +424,7 @@ export default function PrivacyPolicy() {
                                     legally required.
                                 </p>
 
-                                <h2>21. Your Privacy Rights</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">21. Your Privacy Rights</h3>
 
                                 <ol>
                                     <li>Request access to personal information</li>
@@ -462,7 +435,7 @@ export default function PrivacyPolicy() {
                                     <li>Withdraw consent where applicable</li>
                                 </ol>
 
-                                <h2>22. Privacy Requests</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">22. Privacy Requests</h3>
 
                                 <p>
                                     To submit a privacy request, contact us at:
@@ -485,13 +458,13 @@ export default function PrivacyPolicy() {
                                     </p>
                                 </div>
 
-                                <h2>23. No Sale of Personal Information</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">23. No Sale of Personal Information</h3>
 
                                 <p>
                                     We do not sell personal information for money.
                                 </p>
 
-                                <h2>24. California Privacy Notice</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">24. California Privacy Notice</h3>
 
                                 <p>
                                     California residents may have additional rights regarding
@@ -499,7 +472,7 @@ export default function PrivacyPolicy() {
                                     out of certain uses of personal information.
                                 </p>
 
-                                <h2>25. European Economic Area and UK Notice</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">25. European Economic Area and UK Notice</h3>
 
                                 <p>
                                     If applicable law applies, users located in the European
@@ -507,14 +480,14 @@ export default function PrivacyPolicy() {
                                     relevant privacy regulations.
                                 </p>
 
-                                <h2>26. Client Data Processing Terms</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">26. Client Data Processing Terms</h3>
 
                                 <p>
                                     We process client-provided personal data only for the
                                     agreed project purpose unless otherwise required by law.
                                 </p>
 
-                                <h2>27. Third-Party Links</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">27. Third-Party Links</h3>
 
                                 <p>
                                     Our website may contain links to third-party websites,
@@ -522,7 +495,7 @@ export default function PrivacyPolicy() {
                                     own policies and terms.
                                 </p>
 
-                                <h2>28. Third-Party Tools Used in Projects</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5" >28. Third-Party Tools Used in Projects</h3>
 
                                 <p>
                                     Client projects may involve third-party platforms,
@@ -530,14 +503,14 @@ export default function PrivacyPolicy() {
                                     tools, plugins, and software libraries.
                                 </p>
 
-                                <h2>29. Data Accuracy</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">29. Data Accuracy</h3>
 
                                 <p>
                                     You are responsible for providing accurate, complete, and
                                     current information.
                                 </p>
 
-                                <h2>30. Data Deletion After Project Completion</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">30. Data Deletion After Project Completion</h3>
 
                                 <p>
                                     After a project ends, we may delete project files,
@@ -545,7 +518,7 @@ export default function PrivacyPolicy() {
                                     our discretion.
                                 </p>
 
-                                <h2>31. Confidentiality</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">31. Confidentiality</h3>
 
                                 <p>
                                     We take reasonable steps to keep client project
@@ -553,14 +526,14 @@ export default function PrivacyPolicy() {
                                     required or necessary for service delivery.
                                 </p>
 
-                                <h2>32. Changes to This Privacy Policy</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5">32. Changes to This Privacy Policy</h3>
 
                                 <p>
                                     We may update this Privacy Policy periodically. Updated
                                     versions become effective when posted on our website.
                                 </p>
 
-                                <h2>33. Contact Us</h2>
+                                <h3 className="text-3xl font-bold text-gray-900 mt-14 mb-5" >33. Contact Us</h3>
 
                                 <p>
                                     If you have questions regarding this Privacy Policy or
@@ -569,7 +542,7 @@ export default function PrivacyPolicy() {
 
                                 <div className="
                                     mt-8 rounded-3xl
-                                    bg-gradient-to-br from-[#111827] to-[#1e293b]
+                                    bg-gradient-to-br from-[#025EE6] to-[#1e293b]
                                     p-10 text-white
                                     shadow-xl
                                 ">

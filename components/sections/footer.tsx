@@ -88,10 +88,9 @@ export function Footer() {
                   <li key={i}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white text-sm relative group transition"
+                      className="text-gray-400 hover:text-white text-sm transition"
                     >
                       {link.label}
-                      <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
                     </Link>
                   </li>
                 ))}
@@ -108,20 +107,20 @@ export function Footer() {
           </p>
 
           <div className="flex gap-6">
-            {['Privacy Policy', 'Terms of Service'].map((item, i) => (
+            {[
+              { label: 'Privacy Policy', href: '/privacy' },
+              { label: 'Terms of Service', href: '/terms' },
+            ].map((item, i) => (
               <Link
                 key={i}
-                href="link.href"
-                className="text-gray-400 hover:text-white text-sm relative group transition"
+                href={item.href}
+                className="text-gray-400 hover:text-white text-sm transition"
               >
-                {item}
-                <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+                {item.label}
               </Link>
             ))}
           </div>
-
         </div>
-
       </div>
     </footer>
   )
