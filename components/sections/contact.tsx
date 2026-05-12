@@ -44,11 +44,11 @@ export function Contact() {
               </div>
               <div>
                 <p className="font-semibold text-gray-900">Phone</p>
-                <p className="text-gray-600">+92 XXX XXX XXXX</p>
+                <p className="text-gray-600">+14092695242</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
+            {/* <div className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border hover:shadow-md transition">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                 <MapPin className="text-purple-600" />
               </div>
@@ -56,7 +56,7 @@ export function Contact() {
                 <p className="font-semibold text-gray-900">Location</p>
                 <p className="text-gray-600">Karachi, Pakistan</p>
               </div>
-            </div>
+            </div> */}
 
           </div>
 

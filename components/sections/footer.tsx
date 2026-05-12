@@ -109,14 +109,14 @@ export function Footer() {
 
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service'].map((item, i) => (
-              <a
+              <Link
                 key={i}
-                href="#"
+                href="link.href"
                 className="text-gray-400 hover:text-white text-sm relative group transition"
               >
                 {item}
                 <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
