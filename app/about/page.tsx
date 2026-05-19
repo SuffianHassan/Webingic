@@ -14,13 +14,13 @@ const highlights = [
 
 const team = [
     {
-        name: 'Sarah Anderson',
+        name: 'Syed Ibrahim Ahmed',
         role: 'CEO & Founder',
         bio: 'Visionary leader with 15 years in digital transformation',
     },
     {
-        name: 'Marcus Chen',
-        role: 'CTO & Lead Developer',
+        name: 'Kurt Lish',
+        role: 'CTO',
         bio: 'Expert in scalable architecture and cloud solutions',
     },
     {
